@@ -1,0 +1,261 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+html {
+  background: url(../../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+/* color animate=*/
+@keyframes color-animation {
+  0% {
+    background: #ad1457;
+  }
+  50% {
+    background: dodgerblue;
+  }
+  25% {
+    background: green;
+  }
+  75% {
+    background: yellow;
+  }
+  100% {
+    background: #bbdefb
+  }
+}
+.block {
+  width: 100%;
+  height: 100%;
+  animation: color-animation 3s infinite linear alternate;
+  color: green;
+}
+button{
+  border-radius: 3%;
+  width: 30px;
+}
+span{
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 80px;
+  font-weight: bold;
+  padding-right: 80px;
+  padding-left: 10px;
+  width: 10%;
+}
+/* -====================================================== root==================================*/
+#avata {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+#pagesub
+{
+  background-color: forestgreen;
+  border-top: 0px;
+  width: 10%;
+  border-left: 10px solid red;
+
+  border-top: 5px solid transparent;
+  border-left: 10px solid #555;
+  border-bottom: 5px solid transparent;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+#titile
+{
+  background-color: black;
+  border: 0px solid yellow;
+  border-radius: 0px;
+  border-bottom: 6px solid yellow;
+  border-left: 0px solid red;
+  border-right: 0px solid black;
+  opacity: 1;
+  z-index: -2;
+}
+#cssRoll
+{
+  background-color: forestgreen;
+  border-top: 1px solid deepskyblue;
+  border-bottom: 1px solid deepskyblue;
+  border-left: 2px solid deepskyblue;
+  border-right: 2px solid deepskyblue;
+  border-radius: 20px;
+  width: 100px;
+}
+/* -====================================================== tour==================================*/
+#pMapHanoi{
+  position: absolute;
+  top: 720px;
+  left: 260px;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  z-index: +1;
+}
+#pMapSaigon{
+  position: absolute;
+  top: 1300px;
+  left: 350px;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  z-index: +1;
+}
+#pMapDanang{
+  position: absolute;
+  top: 900px;
+  left: 400px;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  z-index: +1;
+}
+#imgtour {
+  border-radius: 10%;
+  width: 400px;
+  height: 300px;
+}
+#tourname
+
+{
+  background-color: forestgreen;
+  color: yellow;
+  border: 2px solid yellow;
+  border-radius: 5px;
+  border-bottom: 6px solid yellow;
+  border-left: 6px solid red;
+  width: 100px;
+}
+#sideTourBack{
+  background-image: url(../../images/dock.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* flip image*/
+.flip-box {
+  background-color: transparent;
+  width: 400px;
+  height: 300px;
+  border: 0px solid #f1f1f1;
+  perspective: 0px;
+  border-radius: 10%;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 10%;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+  border-radius: 10%;
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  backface-visibility: hidden;
+  border-radius: 10%;
+}
+
+.flip-box-front {
+  background-color: mediumspringgreen;
+  color: black;
+  border-radius: 10%;
+}
+
+.flip-box-back {
+  background-color: mediumspringgreen;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 10%;
+}
+/* shake*/
+.shake:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 0px) rotate(1deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  60% { transform: translate(-1px, 1px) rotate(0deg); }
+  70% { transform: translate(1px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 1px) rotate(0deg); }
+  100% { transform: translate(1px, -1px) rotate(-1deg); }
+}
+/* -====================================================== about==================================*/
+#Intro{
+  position: absolute;
+  height: 835px;
+  top: 414px;
+  left: 700px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  z-index: +1;
+  opacity: 0.8;
+}
+#ab {
+  position: absolute;
+  top: 320px;
+  left: 300px;
+  color: forestgreen;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  z-index: +1;
+}
+/* -====================================================== contact==================================*/
+
+
+
+
+sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 200px;
+}
+
+#icon
+{
+  padding-right: 10px;
+}
+
+#site{
+
+}
+

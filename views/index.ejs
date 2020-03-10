@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Checkinchal</title>
+  <!-- CSS-->
+  <link rel='stylesheet' href='/stylesheets/index.css' />
+  <!-- JS -->
+  <script crossorigin src="javascripts/react.production.min.js"></script>
+  <script crossorigin src="javascripts/react-dom.production.min.js"></script>
+  <script src="javascripts/browser.min.js"></script>
+  <!-- js for index page-->
+  <script src="javascripts/index.js" type="text/babel"></script>
+  <!-- GG signin-->
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script>
+      function onSuccess(googleUser) {
+          console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      }
+      function onFailure(error) {
+          console.log(error);
+      }
+      function renderButton() {
+          gapi.signin2.render('my-signin2', {
+              'scope': 'profile email',
+              'width': 220,
+              'height': 30,
+              'longtitle': true,
+              'theme': 'dark',
+              'onsuccess': onSuccess,
+              'onfailure': onFailure
+          });
+      }
+  </script>
+</head>
+
+<body>
+
+<div id="root"></div>
+
+<div id="about"></div>
+
+<div id="tour"></div>
+
+<div id="contact"></div>
+
+
+
+</body>
+
+</html>
